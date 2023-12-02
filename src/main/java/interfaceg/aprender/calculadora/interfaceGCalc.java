@@ -549,7 +549,10 @@ public class interfaceGCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_resetActionPerformed
 
     private void parentese1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parentese1ActionPerformed
-        ColocarText.setText(conta, setText, str, "(");
+        str = conta.getText() + "(";
+       setText = true;
+       conta.setText(String.valueOf(str));
+       setText = false;
     }//GEN-LAST:event_parentese1ActionPerformed
 
     private void parentese2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parentese2ActionPerformed
