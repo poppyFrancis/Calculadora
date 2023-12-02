@@ -55,7 +55,7 @@ OBS.: se abrir um parenteses não se esqueça de fechar.
 # Outros
 Possível tanto digitar quanto clicar nos botões pre-selecionados. Para dar o resultado de uma expressão ao se digitar é com o "Enter" ou com o "=" do teclado. 
 Possui um histórico logo acima de onde se encontra a expressão e acima desse histórico tem um item que quando uma expressão é inválida aparece a mensagem: "Expressão mal formada". E essa some logo após uma expressão válida ser digitada.
-Essa calculadora trabalha com números em base de notação científica caso o resultado seja divisível por 10. 
+Essa calculadora trabalha com números em base de notação científica caso o resultado seja divisível por 10. Exemplo: 10*10=1E+2, ou seja, é 1 * 10^2; 123+7=1,23E+2, ou seja 1,23 * 10^2; 1000+1000=2E+3, ou seja, 2 * 10^3
 
 
 # Como rodar em meu computador?
