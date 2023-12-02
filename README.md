@@ -59,7 +59,7 @@ Essa calculadora trabalha com números em base de notação científica caso o r
 
 
 # Como rodar em meu computador?
-Primeira coisa a se fazer é baixar o .zip desse projeto. Depois de baixado abra o netbeans, vá na aba "File", "Import Project", "From ZIP..." depois disso é só selecionar o .zip baixado. Com o projeto dentro do netbeans é so dar um "Run project" ou ir na classe Calculadora e shift+f6.
+Primeira coisa a se fazer é baixar o .zip desse projeto. Depois de baixado abra o netbeans, vá na aba "File", "Import Project", "From ZIP..." depois disso é só selecionar o .zip baixado. Com o projeto dentro do netbeans é so dar um "Run project" ou ir na classe Calculadora e shift+f6. Ou você pode utilizar outra IDE ou até mesmo nenhuma IDE.
 
 
 # Agradecimentos
