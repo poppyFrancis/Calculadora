@@ -8,48 +8,9 @@ package interfaceg.aprender.calculadora;
  *
  * @author talles
  */
-public class teste {
+public class Calculadora {
+    
     public static void main(String[] args) {
-  
         new interfaceGCalc().setVisible(true);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

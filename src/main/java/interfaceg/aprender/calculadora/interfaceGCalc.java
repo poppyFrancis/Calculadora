@@ -4,9 +4,6 @@
  */
 package interfaceg.aprender.calculadora;
 
-import java.awt.event.KeyAdapter;
-import java.text.DecimalFormat;
-import java.util.Arrays;
 import javax.swing.text.BadLocationException;
 
 /**
@@ -16,7 +13,7 @@ import javax.swing.text.BadLocationException;
 public class interfaceGCalc extends javax.swing.JFrame {
 
     String str = new String();
-    boolean setText = false;
+    boolean setText = false; // verifica se o setText foi utilizado para a separação da escrita pelo teclado
     String historicoStr = new String();
     boolean verificarResult = false;// verifica se o usuario escreveu "=" no campo de texto
     
@@ -65,6 +62,7 @@ public class interfaceGCalc extends javax.swing.JFrame {
         expressaoErrada = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora");
 
         historico.setFont(new java.awt.Font("Laksaman", 1, 15)); // NOI18N
         historico.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(0, 0, 0)), "Histórico"));
@@ -99,7 +97,6 @@ public class interfaceGCalc extends javax.swing.JFrame {
                         }
                     } else if(verificar2){
                         try{
-                            System.out.println("value colocado--> " + numString);
                             if(numString.equals("=")){
                                 numString = "";
                                 System.out.println(numString);
@@ -464,45 +461,27 @@ public class interfaceGCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_historicoActionPerformed
 
     private void restoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restoActionPerformed
-        str = conta.getText() + " mod ";
-     setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, " mod ");
     }//GEN-LAST:event_restoActionPerformed
 
     private void piActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piActionPerformed
-        str = conta.getText() + "3,1416";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "3,1416");
     }//GEN-LAST:event_piActionPerformed
 
     private void dividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dividirActionPerformed
-        str = conta.getText() + "/";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "/");
     }//GEN-LAST:event_dividirActionPerformed
 
     private void raizQuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raizQuadradaActionPerformed
-         str = conta.getText() + "√";
-       setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "√");
     }//GEN-LAST:event_raizQuadradaActionPerformed
 
     private void produtoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoActionPerformed
-         str = conta.getText() + "*";
-         setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "*");
     }//GEN-LAST:event_produtoActionPerformed
 
     private void decrementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decrementoActionPerformed
-           str = conta.getText() + "-";
-           setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "-");
     }//GEN-LAST:event_decrementoActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
@@ -514,129 +493,82 @@ public class interfaceGCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_contaActionPerformed
 
     private void incrementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incrementoActionPerformed
-         str = conta.getText() + "+";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "+");
     }//GEN-LAST:event_incrementoActionPerformed
 
     private void elevarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_elevarActionPerformed
-            str = conta.getText() + "^";
-          setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "^");
     }//GEN-LAST:event_elevarActionPerformed
 
     private void num0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num0ActionPerformed
-     str = conta.getText() + "0";
-     setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "0");
         
     }//GEN-LAST:event_num0ActionPerformed
 
     private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
-        str = conta.getText() + "1";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "1");
     }//GEN-LAST:event_num1ActionPerformed
 
     private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
-        str = conta.getText() + "2";
-       setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "2");
     }//GEN-LAST:event_num2ActionPerformed
 
     private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
-        str = conta.getText() + "3";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "3");
     }//GEN-LAST:event_num3ActionPerformed
 
     private void num6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num6ActionPerformed
-        str = conta.getText() + "6";
-       setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "6");
     }//GEN-LAST:event_num6ActionPerformed
 
     private void num5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num5ActionPerformed
-        str = conta.getText() + "5";
-       setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "5");
     }//GEN-LAST:event_num5ActionPerformed
 
     private void num4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num4ActionPerformed
-        str = conta.getText() + "4";
-       setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "4");
     }//GEN-LAST:event_num4ActionPerformed
 
     private void num9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num9ActionPerformed
-       str = conta.getText() + "9";
-     setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;;
+       ColocarText.setText(conta, setText, str, "9");
     }//GEN-LAST:event_num9ActionPerformed
 
     private void num8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num8ActionPerformed
-        str = conta.getText() + "8";
-       setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "8");
     }//GEN-LAST:event_num8ActionPerformed
 
     private void num7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num7ActionPerformed
-        str = conta.getText() + "7";
-       setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "7");
     }//GEN-LAST:event_num7ActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
-         str = "";
-         setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+       str = "";
+       setText = true;
+       conta.setText(String.valueOf(str));
+       setText = false;
     }//GEN-LAST:event_resetActionPerformed
 
     private void parentese1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parentese1ActionPerformed
-        str = conta.getText() + "(";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "(");
     }//GEN-LAST:event_parentese1ActionPerformed
 
     private void parentese2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parentese2ActionPerformed
-        str = conta.getText() + ")";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, ")");
     }//GEN-LAST:event_parentese2ActionPerformed
 
     private void virgulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_virgulaActionPerformed
-         str = conta.getText() + ",";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, ",");
     }//GEN-LAST:event_virgulaActionPerformed
 
     private void procentagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procentagemActionPerformed
-        str = conta.getText() + "%";
-        setText = true;
-        conta.setText(String.valueOf(str));
-        setText = false;
+        ColocarText.setText(conta, setText, str, "%");
     }//GEN-LAST:event_procentagemActionPerformed
 
+    
+    //Verifica se foi digitado "Enter" ou "=" para o resultado
     private void contaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_contaKeyPressed
-        int key = evt.getKeyCode();
+        int key = evt.getKeyCode(); 
         char keyChar = evt.getKeyChar();
-        System.out.println(keyChar);
         if (key == evt.VK_ENTER) {
             Resultado();
 	} else if(keyChar == '=' && !(conta.getText().isEmpty())){
@@ -647,36 +579,36 @@ public class interfaceGCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_contaKeyPressed
      
     private void Resultado() {
+        // método que realiza a conta e a insere no historico.  Este método usa a biblioteca Expression de Udo Klimaschewski.
+
         
         String replaceString = conta.getText().replace(',', '.');
-       
-       
-        replaceString = replaceString.replace("%", "/100");
-        replaceString = replaceString.replace(" mod ", "%");//
-       
         
-        String[] tmp = VerificarConta.tirarRaiz(conta.getText());
+       
+        if(replaceString.contains("%")){
+            replaceString = replaceString.replace("%", "/100");
+ 
+        }      
         
-        for(int i = 0; i < tmp.length; i++){
-            replaceString = replaceString.replace("√" + tmp[i],"sqrt(" + tmp[i] + ")");
+        
+        if(replaceString.contains(" mod ")){
+            replaceString = replaceString.replace(" mod ", "%");//
         }
         
-        if(VerificarConta.verificar(replaceString)){
-        
-            if(String.valueOf(new Expression(replaceString).eval()).contains("E")){
+        if(conta.getText().contains("√")){
+            String[] tmp = VerificarConta.tirarRaiz(conta.getText());
 
-                DecimalFormat formatador = new DecimalFormat("0.###############");
-                String resultadoFormatado = formatador.format(new Expression(replaceString).eval());
-
-                str = conta.getText() + "=" + resultadoFormatado;
-            } else{
-                Expression expression = new Expression(replaceString);
-                str = conta.getText() + " = " + expression.eval();
+            for (String tmp1 : tmp) {
+                replaceString = replaceString.replace("√" + tmp1, "sqrt(" + tmp1 + ")");
             }
-        
-        
+        } 
+        if(VerificarConta.verificar(replaceString)){
+
+            Expression expression = new Expression(replaceString);
+            str = conta.getText() + " = " + expression.eval();
+            
             replaceString = str.replace('.', ',');
-            expressaoErrada.setText("");
+            
             historicoStr += " " + (replaceString) + " |";  
             setText = true;
             historico.setText(historicoStr);
@@ -726,7 +658,7 @@ public class interfaceGCalc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField conta;
+    public static javax.swing.JTextField conta;
     private javax.swing.JButton decremento;
     private javax.swing.JButton dividir;
     private javax.swing.JButton elevar;
